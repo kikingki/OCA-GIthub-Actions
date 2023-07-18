@@ -9,6 +9,9 @@ jobs:
     name: Comment Job
     runs-on: ubuntu-latest
     steps:
+    - name: Install @octokit/rest
+      run: npm install @octokit/rest@latest
+
     - name: Check if comment contains "/close"
       uses: actions/github-script@v6
       with:
