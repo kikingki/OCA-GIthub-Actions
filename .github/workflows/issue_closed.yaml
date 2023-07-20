@@ -8,6 +8,11 @@ jobs:
   closeIssue:
     name: Comment Job
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    container:
+      image: node:18
     steps:
     - name: Install @octokit/rest
       run: npm install @octokit/rest@latest
